@@ -1,300 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akash Shinde | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">AS</div>
+  <nav class="navbar">
+    <div class="logo">AS</div>
 
-  <ul id="navLinks">
-    <li><a href="#home" onclick="closeMenu()">Home</a></li>
-    <li><a href="#about" onclick="closeMenu()">About</a></li>
-    <li><a href="#education" onclick="closeMenu()">Education</a></li>
-    <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-    <li><a href="#resume" onclick="closeMenu()">Resume</a></li>
-    <li><a href="#connect" onclick="closeMenu()">Connect</a></li>
-   
-  </ul>
+    <ul id="navLinks">
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#education" onclick="closeMenu()">Education</a></li>
+      <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+      <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+      <li><a href="#resume" onclick="closeMenu()">Resume</a></li>
+      <li><a href="#connect" onclick="closeMenu()">Connect</a></li>
+    </ul>
 
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-</nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </nav>
 
-<section id="home" class="home-connect-section fade-up">
+  <section id="home" class="home-connect-section fade-up">
 
-  <div class="intro-banner">
-    <div class="intro-text">
-      <p class="small-tag">PG-DAC Student at CDAC</p>
-      <h1>Akash Shinde</h1>
-      <h2>Java Full Stack Developer</h2>
-      <p>
-        I build database-driven applications using Java, JDBC, Oracle,
-        MySQL, ASP.NET Core MVC, Web API and Microservices.
-      </p>
+    <div class="intro-banner">
+      <div class="intro-text">
+        <p class="small-tag">PG-DAC Student at CDAC</p>
+        <h1>Akash Shinde</h1>
+        <h2>Java Full Stack Developer</h2>
+        <p>
+          I build database-driven applications using Java, JDBC, Oracle,
+          MySQL, ASP.NET Core MVC, Web API and Microservices.
+        </p>
+      </div>
+
+      <div class="intro-photo">
+        <img src="images/profile.png" alt="Akash Shinde"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span>AS</span>
+      </div>
     </div>
 
-    <div class="intro-photo">
-      <img src="images/profile.png" alt="Akash Shinde"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <span>AS</span>
-    </div>
-  </div>
+    <h2 class="connect-title">Connect With Me</h2>
 
-  <h2 class="connect-title">Connect With Me</h2>
+    <div class="home-connect-grid">
 
-  <div class="home-connect-grid">
-
-    <a href="https://akash-shinde.netlify.app" target="_blank" class="home-connect-card">
-      <img src="images/connect/portfolio.png" alt="Website">
-      <h3>Website</h3>
-    </a>
-
-    <a href="https://www.linkedin.com/in/akash--shinde" target="_blank" class="home-connect-card">
-      <img src="images/connect/linkedin.png" alt="LinkedIn">
-      <h3>LinkedIn</h3>
-    </a>
-
-    <a href="https://github.com/AkashShinde65" target="_blank" class="home-connect-card">
-      <img src="images/connect/github.png" alt="GitHub">
-      <h3>GitHub</h3>
-    </a>
-
-    <a href="https://unipune.academia.edu/AkashShinde3" target="_blank" class="home-connect-card">
-      <img src="images/connect/academia.png" alt="Academia">
-      <h3>Academia</h3>
-    </a>
-
-    <a href="resume/Akash_Shinde_Resume.pdf" target="_blank" class="home-connect-card">
-      <img src="images/connect/resume.png" alt="Resume">
-      <h3>Resume</h3>
-    </a>
-
-    <a href="mailto:luckakash65@gmail.com" class="home-connect-card">
-      <img src="images/connect/email.png" alt="Email">
-      <h3>Email</h3>
-    </a>
-
-    <a href="https://wa.me/919673294751" target="_blank" class="home-connect-card">
-      <img src="images/connect/whatsapp.png" alt="WhatsApp">
-      <h3>WhatsApp</h3>
-    </a>
-
-    <a href="tel:+919673294751" class="home-connect-card">
-      <img src="images/connect/call.png" alt="Call">
-      <h3>Call</h3>
-    </a>
-
-    <a href="images/connect/portfolio-qr.png" target="_blank" class="home-connect-card">
-      <img src="images/connect/portfolio-qr.png" alt="QR Code">
-      <h3>QR Code</h3>
-    </a>
-
-  </div>
-
-</section>
-
-<section id="about" class="section fade-up">
-  <h2>About Me</h2>
-  <p>
-    I am pursuing PG-DAC at CDAC. I am focused on Java Full Stack
-    Development, ASP.NET Core MVC, Web API, database connectivity,
-    CRUD applications, REST APIs and Microservices.
-  </p>
-</section>
-
-<section id="education" class="section fade-up">
-  <h2>Education & Focus</h2>
-
-  <div class="about-grid">
-    <div class="info-card">
-      <h3>🎓 Education</h3>
-      <p>
-        Pursuing PG-DAC at CDAC with focus on software development,
-        databases and backend technologies.
-      </p>
-    </div>
-
-    <div class="info-card">
-      <h3>💻 Development Focus</h3>
-      <p>
-        Building practical applications using Java, JDBC, ASP.NET Core MVC,
-        Web API, MySQL and Oracle.
-      </p>
-    </div>
-
-    <div class="info-card">
-      <h3>🚀 Career Goal</h3>
-      <p>
-        To work as a Java Full Stack Developer / Backend Developer and build
-        scalable software solutions.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="section fade-up">
-  <h2>Technical Skills</h2>
-
-  <div class="skills">
-    <span>Java</span>
-    <span>JDBC</span>
-    <span>Oracle</span>
-    <span>MySQL</span>
-    <span>C#</span>
-    <span>ASP.NET Core MVC</span>
-    <span>Web API</span>
-    <span>Entity Framework Core</span>
-    <span>Microservices</span>
-    <span>GitHub</span>
-  </div>
-</section>
-
-<section id="projects" class="section fade-up">
-  <h2>Projects</h2>
-
-  <div class="project-grid">
-    <div class="project-card">
-      <div class="img-box">Course Image</div>
-      <h3>Course Registration System</h3>
-      <p>ASP.NET Core MVC + MySQL CRUD application.</p>
-    </div>
-
-    <div class="project-card">
-      <div class="img-box">JDBC Image</div>
-      <h3>JDBC Product Management</h3>
-      <p>Java JDBC application connected with MySQL database.</p>
-    </div>
-
-    <div class="project-card">
-      <div class="img-box">Oracle Image</div>
-      <h3>Oracle Order Processing</h3>
-      <p>Java + Oracle Stored Procedure + CallableStatement.</p>
-    </div>
-
-    <div class="project-card">
-      <div class="img-box">gRPC Image</div>
-      <h3>gRPC Microservices Project</h3>
-      <p>Java gRPC client-server application with database.</p>
-    </div>
-  </div>
-</section>
-
-<section id="resume" class="section fade-up">
-  <h2>Resume</h2>
-
-  <div class="resume-card">
-    <div class="resume-icon">📄</div>
-
-    <div class="resume-content">
-      <h3>Akash Shinde - Resume</h3>
-      <p>
-        Open my resume to view my education, technical skills,
-        projects and contact details.
-      </p>
-
-      <a href="resume/Akash_Shinde_Resume.pdf" target="_blank" class="resume-btn">
-        Open Resume
+      <a href="https://akash-shinde.netlify.app" target="_blank" class="home-connect-card">
+        <img src="images/connect/portfolio.png" alt="Website">
+        <h3>Website</h3>
       </a>
+
+      <a href="https://www.instagram.com/akash_shinde65" target="_blank" class="home-connect-card">
+        <img src="images/connect/instagram.png" alt="Instagram">
+        <h3>Instagram</h3>
+      </a>
+
+      <a href="https://www.linkedin.com/in/akash--shinde" target="_blank" class="home-connect-card">
+        <img src="images/connect/linkedin.png" alt="LinkedIn">
+        <h3>LinkedIn</h3>
+      </a>
+
+      <a href="https://github.com/AkashShinde65" target="_blank" class="home-connect-card">
+        <img src="images/connect/github.png" alt="GitHub">
+        <h3>GitHub</h3>
+      </a>
+
+      <a href="https://unipune.academia.edu/AkashShinde3" target="_blank" class="home-connect-card">
+        <img src="images/connect/academia.png" alt="Academia">
+        <h3>Academia</h3>
+      </a>
+
+      <a href="resume/Akash_Shinde_Resume.pdf" target="_blank" class="home-connect-card">
+        <img src="images/connect/resume.png" alt="Resume">
+        <h3>Resume</h3>
+      </a>
+
+      <a href="mailto:luckakash65@gmail.com" class="home-connect-card">
+        <img src="images/connect/email.png" alt="Email">
+        <h3>Email</h3>
+      </a>
+
+      <a href="https://wa.me/919673294751" target="_blank" class="home-connect-card">
+        <img src="images/connect/whatsapp.png" alt="WhatsApp">
+        <h3>WhatsApp</h3>
+      </a>
+
+      <a href="tel:+919673294751" class="home-connect-card">
+        <img src="images/connect/call.png" alt="Call">
+        <h3>Call</h3>
+      </a>
+
+      <a href="images/connect/portfolio-qr.png" target="_blank" class="home-connect-card">
+        <img src="images/connect/portfolio-qr.png" alt="QR Code">
+        <h3>QR Code</h3>
+      </a>
+
+    </div>
+
+  </section>
+
+  <section id="about" class="section fade-up">
+    <h2>About Me</h2>
+    <p>
+      I am pursuing PG-DAC at CDAC. I am focused on Java Full Stack
+      Development, ASP.NET Core MVC, Web API, database connectivity,
+      CRUD applications, REST APIs and Microservices.
+    </p>
+  </section>
+
+  <section id="education" class="section fade-up">
+    <h2>Education & Focus</h2>
+
+    <div class="about-grid">
+      <div class="info-card">
+        <h3>🎓 Education</h3>
+        <p>
+          Pursuing PG-DAC at CDAC with focus on software development,
+          databases and backend technologies.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>💻 Development Focus</h3>
+        <p>
+          Building practical applications using Java, JDBC, ASP.NET Core MVC,
+          Web API, MySQL and Oracle.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>🚀 Career Goal</h3>
+        <p>
+          To work as a Java Full Stack Developer / Backend Developer and build
+          scalable software solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section fade-up">
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+      <span>Java</span>
+      <span>JDBC</span>
+      <span>Oracle</span>
+      <span>MySQL</span>
+      <span>C#</span>
+      <span>ASP.NET Core MVC</span>
+      <span>Web API</span>
+      <span>Entity Framework Core</span>
+      <span>Microservices</span>
+      <span>GitHub</span>
+    </div>
+  </section>
+
+  <section id="projects" class="section fade-up">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="img-box">Course Image</div>
+        <h3>Course Registration System</h3>
+        <p>ASP.NET Core MVC + MySQL CRUD application.</p>
+      </div>
+
+      <div class="project-card">
+        <div class="img-box">JDBC Image</div>
+        <h3>JDBC Product Management</h3>
+        <p>Java JDBC application connected with MySQL database.</p>
+      </div>
+
+      <div class="project-card">
+        <div class="img-box">Oracle Image</div>
+        <h3>Oracle Order Processing</h3>
+        <p>Java + Oracle Stored Procedure + CallableStatement.</p>
+      </div>
+
+      <div class="project-card">
+        <div class="img-box">gRPC Image</div>
+        <h3>gRPC Microservices Project</h3>
+        <p>Java gRPC client-server application with database.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section fade-up">
+    <h2>Resume</h2>
+
+    <div class="resume-card">
+      <div class="resume-icon">📄</div>
+
+      <div class="resume-content">
+        <h3>Akash Shinde - Resume</h3>
+        <p>
+          Open my resume to view my education, technical skills,
+          projects and contact details.
+        </p>
+
+        <a href="resume/Akash_Shinde_Resume.pdf" target="_blank" class="resume-btn">
+          Open Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect" class="connect-section fade-up">
+    <h2>Connect With Me</h2>
+
+    <div class="connect-grid">
+
+      <a href="https://akash-shinde.netlify.app" target="_blank" class="connect-card">
+        <img src="images/connect/portfolio.png" alt="Portfolio">
+        <h3>Portfolio</h3>
+      </a>
+
+      <a href="https://www.instagram.com/akash_shinde65" target="_blank" class="connect-card">
+        <img src="images/connect/instagram.png" alt="Instagram">
+        <h3>Instagram</h3>
+      </a>
+
+      <a href="https://www.linkedin.com/in/akash--shinde" target="_blank" class="connect-card">
+        <img src="images/connect/linkedin.png" alt="LinkedIn">
+        <h3>LinkedIn</h3>
+      </a>
+
+      <a href="https://github.com/AkashShinde65" target="_blank" class="connect-card">
+        <img src="images/connect/github.png" alt="GitHub">
+        <h3>GitHub</h3>
+      </a>
+
+      <a href="https://unipune.academia.edu/AkashShinde3" target="_blank" class="connect-card">
+        <img src="images/connect/academia.png" alt="Academia">
+        <h3>Academia</h3>
+      </a>
+
+      <a href="resume/Akash_Shinde_Resume.pdf" target="_blank" class="connect-card">
+        <img src="images/connect/resume.png" alt="Resume">
+        <h3>Resume</h3>
+      </a>
+
+      <a href="mailto:luckakash65@gmail.com" class="connect-card">
+        <img src="images/connect/email.png" alt="Email">
+        <h3>Email</h3>
+      </a>
+
+      <a href="https://wa.me/919673294751" target="_blank" class="connect-card">
+        <img src="images/connect/whatsapp.png" alt="WhatsApp">
+        <h3>WhatsApp</h3>
+      </a>
+
+      <a href="tel:+919673294751" class="connect-card">
+        <img src="images/connect/call.png" alt="Call">
+        <h3>Call</h3>
+      </a>
+
+    </div>
+
+    <div class="portfolio-qr-box">
+      <h3>Scan Portfolio QR Code</h3>
+
+      <a href="https://akash-shinde.netlify.app" target="_blank">
+        <img src="images/connect/portfolio-qr.png" alt="Portfolio QR Code">
+      </a>
+
+      <p>Scan or click to open my portfolio website.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Akash Shinde | Portfolio Website</p>
+  </footer>
+
+  <!-- Simple Portfolio Chatbot -->
+  <div class="chatbot-box" id="chatbotBox">
+    <div class="chatbot-header">
+      <span>Akash Bot</span>
+      <button onclick="toggleChatbot()">×</button>
+    </div>
+
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="bot-message">
+        Hi 👋 I am Akash Bot. Ask me about skills, projects, resume, research papers, Instagram, LinkedIn, GitHub,
+        Academia or WhatsApp.
+      </div>
+    </div>
+
+    <div class="chatbot-input">
+      <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKey(event)">
+      <button onclick="sendMessage()">Send</button>
     </div>
   </div>
-</section>
 
-<section id="connect" class="connect-section fade-up">
-  <h2>Connect With Me</h2>
+  <button class="chatbot-btn" onclick="toggleChatbot()">💬</button>
 
-  <div class="connect-grid">
-
-    <a href="https://akash-shinde.netlify.app" target="_blank" class="connect-card">
-      <img src="images/connect/portfolio.png" alt="Portfolio">
-      <h3>Portfolio</h3>
-    </a>
-
-    <a href="https://www.linkedin.com/in/akash--shinde" target="_blank" class="connect-card">
-      <img src="images/connect/linkedin.png" alt="LinkedIn">
-      <h3>LinkedIn</h3>
-    </a>
-    <a href="INSTAGRAM_URL_HERE" target="_blank" class="home-connect-card">
-    <img src="images/connect/instagram.png" alt="Instagram">
-    <h3>Instagram</h3>
-    </a>
-    <a href="https://www.instagram.com/akash_shinde65" target="_blank" class="home-connect-card">
-      <img src="images/connect/instagram.png" alt="Instagram">
-      <h3>Instagram</h3>
-    </a>
-
-    <a href="https://github.com/AkashShinde65" target="_blank" class="connect-card">
-      <img src="images/connect/github.png" alt="GitHub">
-      <h3>GitHub</h3>
-    </a>
-
-    <a href="https://unipune.academia.edu/AkashShinde3" target="_blank" class="connect-card">
-      <img src="images/connect/academia.png" alt="Academia">
-      <h3>Academia</h3>
-    </a>
-
-    <a href="resume/Akash_Shinde_Resume.pdf" target="_blank" class="connect-card">
-      <img src="images/connect/resume.png" alt="Resume">
-      <h3>Resume</h3>
-    </a>
-
-    <a href="mailto:luckakash65@gmail.com" class="connect-card">
-      <img src="images/connect/email.png" alt="Email">
-      <h3>Email</h3>
-    </a>
-
-    <a href="https://wa.me/919673294751" target="_blank" class="connect-card">
-      <img src="images/connect/whatsapp.png" alt="WhatsApp">
-      <h3>WhatsApp</h3>
-    </a>
-
-    <a href="tel:+919673294751" class="connect-card">
-      <img src="images/connect/call.png" alt="Call">
-      <h3>Call</h3>
-    </a>
-
-  </div>
-
-  <div class="portfolio-qr-box">
-    <h3>Scan Portfolio QR Code</h3>
-
-    <a href="https://akash-shinde.netlify.app" target="_blank">
-      <img src="images/connect/portfolio-qr.png" alt="Portfolio QR Code">
-    </a>
-
-    <p>Scan or click to open my portfolio website.</p>
-  </div>
-</section>
-
-
-
-<footer>
-  <p>© 2026 Akash Shinde | Portfolio Website</p>
-</footer>
-<!-- Simple Portfolio Chatbot -->
-<div class="chatbot-box" id="chatbotBox">
-  <div class="chatbot-header">
-    <span>Akash Bot</span>
-    <button onclick="toggleChatbot()">×</button>
-  </div>
-
-  <div class="chatbot-messages" id="chatbotMessages">
-    <div class="bot-message">
-      Hi 👋 I am Akash Bot. Ask me about skills, projects, resume, contact or WhatsApp.
-    </div>
-  </div>
-
-  <div class="chatbot-input">
-    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKey(event)">
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</div>
-
-<button class="chatbot-btn" onclick="toggleChatbot()">💬</button>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

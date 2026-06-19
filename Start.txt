@@ -1,6 +1,3 @@
-
-add git intigration
 git add .
-git commit -m "replace live portfolio and github links"
+git commit -m "update portfolio"
 git push
-
