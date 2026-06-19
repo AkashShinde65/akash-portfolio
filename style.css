@@ -64,114 +64,129 @@ body {
   cursor: pointer;
 }
 
-/* Hero */
-.hero {
+/* First Screen Logo Grid */
+.home-connect-section {
   min-height: 100vh;
-  padding: 130px 8% 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
+  padding: 110px 5% 70px;
+  background: #eef3fb;
+}
+
+.intro-banner {
+  max-width: 980px;
+  margin: 0 auto 40px;
   background: linear-gradient(135deg, #fff8f0, #ffd6b0);
+  border-radius: 22px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-.tag {
+.intro-text {
+  flex: 1;
+}
+
+.small-tag {
   color: #ff7a00;
   font-weight: bold;
-}
-
-.hero h1 {
-  font-size: 50px;
-  margin: 15px 0;
-}
-
-.hero h1 span {
-  color: #ff7a00;
-}
-
-.hero h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  max-width: 650px;
-  line-height: 1.7;
-  color: #555;
-}
-
-.buttons {
-  margin-top: 30px;
-}
-
-.buttons a {
-  display: inline-block;
-  background: #ff7a00;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 12px;
-  text-decoration: none;
-  margin-right: 10px;
   margin-bottom: 10px;
-  font-weight: bold;
-  transition: 0.3s;
 }
 
-.buttons a:hover {
-  background: #e66a00;
-  transform: translateY(-3px);
+.intro-text h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #222;
 }
 
-.hero-card {
-  background: white;
-  color: #333;
-  padding: 35px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(255,122,0,0.25);
-  transition: 0.3s;
+.intro-text h2 {
+  font-size: 24px;
+  color: #ff7a00;
+  margin-bottom: 12px;
 }
 
-.hero-card:hover {
-  transform: translateY(-8px);
+.intro-text p {
+  color: #555;
+  line-height: 1.7;
 }
 
-/* Profile Photo */
-.photo {
+.intro-photo {
   width: 180px;
   height: 180px;
-  background: linear-gradient(135deg, #ff7a00, #ffb347);
   border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff7a00, #ffb347);
+  border: 5px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto auto 18px;
-  overflow: hidden;
-  border: 5px solid #ffe2c2;
+  flex-shrink: 0;
   box-shadow: 0 8px 25px rgba(255,122,0,0.35);
 }
 
-.photo img {
+.intro-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.photo span {
+.intro-photo span {
   width: 100%;
   height: 100%;
   display: none;
   align-items: center;
   justify-content: center;
+  color: white;
   font-size: 55px;
   font-weight: bold;
-  color: white;
 }
 
-.small-text {
-  color: #ff7a00;
-  font-weight: bold;
-  margin-top: 6px;
+.connect-title {
+  text-align: center;
+  color: #071b3a;
+  font-size: 42px;
+  margin-bottom: 35px;
+}
+
+.home-connect-grid {
+  max-width: 980px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.home-connect-card {
+  background: white;
+  min-height: 220px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #071b3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.home-connect-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(255,122,0,0.25);
+}
+
+.home-connect-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.home-connect-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #071b3a;
 }
 
 /* Common Sections */
@@ -318,7 +333,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* Connect Section Like Screenshot */
+/* Connect Section */
 .connect-section {
   padding: 80px 5%;
   background: #eef3fb;
@@ -371,7 +386,11 @@ body {
   color: #071b3a;
 }
 
-/* Portfolio QR Below */
+.connect-card p {
+  display: none;
+}
+
+/* Portfolio QR */
 .portfolio-qr-box {
   margin: 45px auto 0;
   max-width: 330px;
@@ -404,6 +423,12 @@ body {
   background: #fff1df;
 }
 
+.contact p {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -423,7 +448,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Mobile */
+/* Tablet */
 @media (max-width: 900px) {
   .menu-btn {
     display: block;
@@ -447,17 +472,22 @@ footer {
     right: 0;
   }
 
-  .hero {
-    flex-direction: column;
+  .intro-banner {
+    flex-direction: column-reverse;
     text-align: center;
   }
 
-  .hero h1 {
-    font-size: 38px;
+  .intro-text h1 {
+    font-size: 34px;
   }
 
-  .hero h2 {
-    font-size: 24px;
+  .intro-text h2 {
+    font-size: 22px;
+  }
+
+  .intro-photo {
+    width: 140px;
+    height: 140px;
   }
 
   .about-grid,
@@ -471,8 +501,59 @@ footer {
   }
 }
 
-/* Phone app-grid look */
+/* Phone */
 @media (max-width: 700px) {
+  .home-connect-section {
+    padding: 95px 22px 60px;
+  }
+
+  .intro-banner {
+    padding: 22px;
+    margin-bottom: 35px;
+  }
+
+  .intro-text h1 {
+    font-size: 30px;
+  }
+
+  .intro-text h2 {
+    font-size: 19px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .intro-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .connect-title {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  .home-connect-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .home-connect-card {
+    min-height: 150px;
+    border-radius: 10px;
+  }
+
+  .home-connect-card img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 14px;
+  }
+
+  .home-connect-card h3 {
+    font-size: 16px;
+  }
+
   .connect-section {
     padding: 60px 22px;
   }
@@ -509,19 +590,23 @@ footer {
 }
 
 @media (max-width: 420px) {
+  .home-connect-grid,
   .connect-grid {
     gap: 12px;
   }
 
+  .home-connect-card,
   .connect-card {
     min-height: 135px;
   }
 
+  .home-connect-card img,
   .connect-card img {
     width: 62px;
     height: 62px;
   }
 
+  .home-connect-card h3,
   .connect-card h3 {
     font-size: 14px;
   }
