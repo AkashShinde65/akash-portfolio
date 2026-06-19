@@ -267,7 +267,26 @@
 <footer>
   <p>© 2026 Akash Shinde | Portfolio Website</p>
 </footer>
+<!-- Simple Portfolio Chatbot -->
+<div class="chatbot-box" id="chatbotBox">
+  <div class="chatbot-header">
+    <span>Akash Bot</span>
+    <button onclick="toggleChatbot()">×</button>
+  </div>
 
+  <div class="chatbot-messages" id="chatbotMessages">
+    <div class="bot-message">
+      Hi 👋 I am Akash Bot. Ask me about skills, projects, resume, contact or WhatsApp.
+    </div>
+  </div>
+
+  <div class="chatbot-input">
+    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKey(event)">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<button class="chatbot-btn" onclick="toggleChatbot()">💬</button>
 <script src="script.js"></script>
 </body>
 </html>
