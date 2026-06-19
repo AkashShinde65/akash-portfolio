@@ -146,7 +146,9 @@ function getBotReply(message) {
   ) {
     return `Akash has 4 research papers listed on Academia. You can view them here: <a href="https://unipune.academia.edu/AkashShinde3" target="_blank">Open Academia</a>`;
   }
-
+  if (has(["instagram", "insta", "ig"])) {
+  return `Akash's Instagram profile: <a href="https://www.instagram.com/akash_shinde65" target="_blank">Open Instagram</a>`;
+  }
   if (has(["academia", "academic"])) {
     return `Akash's Academia profile: <a href="https://unipune.academia.edu/AkashShinde3" target="_blank">Open Academia</a>`;
   }
