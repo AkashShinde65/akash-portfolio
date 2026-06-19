@@ -1,0 +1,16 @@
+cd ~/akash-portfolio
+docker build -t akash-portfolio .
+
+
+docker run -d -p 8080:80 akash-portfolio
+
+open http://localhost:8080
+
+
+stop container 
+
+
+docker stop container_id
+
+
+add git intigration
