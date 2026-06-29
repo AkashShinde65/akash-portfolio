@@ -10,6 +10,7 @@ function closeMenu() {
   navLinks.classList.remove("active");
 }
 
+/* Scroll fade animation */
 const fadeElements = document.querySelectorAll(".fade-up");
 
 function showOnScroll() {
@@ -26,14 +27,46 @@ function showOnScroll() {
 window.addEventListener("scroll", showOnScroll);
 window.addEventListener("load", showOnScroll);
 
-/* Simple Portfolio Chatbot */
+/* Chatbot */
 function toggleChatbot() {
   const chatbotBox = document.getElementById("chatbotBox");
+  const mascot = document.getElementById("chatbotMascot");
+  const speech = document.getElementById("mascotSpeech");
 
   if (chatbotBox.style.display === "flex") {
     chatbotBox.style.display = "none";
+
+    if (mascot) {
+      mascot.classList.remove("open");
+    }
+
+    if (speech) {
+      speech.textContent = "Hi! Ask me anything 👋";
+    }
   } else {
     chatbotBox.style.display = "flex";
+
+    if (mascot) {
+      mascot.classList.add("open");
+    }
+
+    if (speech) {
+      speech.textContent = "I am listening 😊";
+    }
+
+    setTimeout(() => {
+      const input = document.getElementById("chatInput");
+
+      if (input) {
+        input.focus();
+      }
+    }, 150);
+  }
+}
+
+function handleMascotKey(event) {
+  if (event.key === "Enter" || event.key === " ") {
+    toggleChatbot();
   }
 }
 
@@ -64,15 +97,23 @@ function sendMessage() {
 
   messages.innerHTML += `<div class="user-message">${escapeHTML(userText)}</div>`;
 
+  const typingId = `typing-${Date.now()}`;
+  messages.innerHTML += `<div class="bot-message" id="${typingId}">Akash Buddy is typing...</div>`;
+  messages.scrollTop = messages.scrollHeight;
+
   const reply = getBotReply(userText.toLowerCase());
 
   setTimeout(() => {
-    messages.innerHTML += `<div class="bot-message">${reply}</div>`;
+    const typingBubble = document.getElementById(typingId);
+
+    if (typingBubble) {
+      typingBubble.innerHTML = reply;
+    }
+
     messages.scrollTop = messages.scrollHeight;
-  }, 400);
+  }, 350);
 
   input.value = "";
-  messages.scrollTop = messages.scrollHeight;
 }
 
 function getBotReply(message) {
@@ -81,11 +122,11 @@ function getBotReply(message) {
   }
 
   if (has(["hi", "hello", "hey", "hii", "namaste"])) {
-    return "Hello 👋 I am Akash Bot. You can ask me about Akash's skills, projects, resume, research papers, contact, WhatsApp, LinkedIn, GitHub, Academia and portfolio.";
+    return "Hello 👋 I am Akash Buddy. Ask me about Akash's skills, projects, resume, research papers, Instagram, LinkedIn, GitHub, Academia or WhatsApp.";
   }
 
   if (has(["who are you", "your name", "name", "akash"])) {
-    return "This is Akash Shinde's portfolio website. Akash is a PG-DAC student at CDAC and a Java Full Stack Developer.";
+    return "This is Akash Shinde's portfolio website. Akash is a PG-DAC student at CDAC and a Full Stack Developer focused on Java, databases and backend development.";
   }
 
   if (has(["education", "study", "qualification", "college", "cdac", "pg-dac", "pgdac"])) {
@@ -93,11 +134,15 @@ function getBotReply(message) {
   }
 
   if (has(["skill", "skills", "technology", "tech", "stack", "language"])) {
-    return "Akash's skills are Java, JDBC, Oracle, MySQL, C#, ASP.NET Core MVC, Web API, Entity Framework Core, Microservices and GitHub.";
+    return "Akash's skills are Java, JDBC, Oracle, MySQL, C#, ASP.NET Core MVC, Web API, Entity Framework Core, Microservices, GitHub and Operating Systems.";
   }
 
   if (has(["java"])) {
     return "Akash works with Java, JDBC, database connectivity, Oracle, MySQL and backend development.";
+  }
+
+  if (has(["spring", "springboot", "spring boot"])) {
+    return "Akash is currently learning Spring Boot and MVC concepts to build Java-based web applications and backend APIs.";
   }
 
   if (has(["dotnet", ".net", "asp", "mvc", "web api", "ef core", "entity framework"])) {
@@ -132,23 +177,14 @@ function getBotReply(message) {
     return `You can open Akash's resume here: <a href="resume/Akash_Shinde_Resume.pdf" target="_blank">Open Resume</a>`;
   }
 
-  if (
-    has([
-      "paper",
-      "papers",
-      "pepar",
-      "research",
-      "publish",
-      "published",
-      "publication",
-      "journal"
-    ])
-  ) {
-    return `Akash has 4 research papers listed on Academia. You can view them here: <a href="https://unipune.academia.edu/AkashShinde3" target="_blank">Open Academia</a>`;
+  if (has(["paper", "papers", "pepar", "research", "publish", "published", "publication", "journal"])) {
+    return `Akash has research papers listed on Academia. You can view them here: <a href="https://unipune.academia.edu/AkashShinde3" target="_blank">Open Academia</a>`;
   }
+
   if (has(["instagram", "insta", "ig"])) {
-  return `Akash's Instagram profile: <a href="https://www.instagram.com/akash_shinde65" target="_blank">Open Instagram</a>`;
+    return `Akash's Instagram profile: <a href="https://www.instagram.com/akash_shinde65" target="_blank">Open Instagram</a>`;
   }
+
   if (has(["academia", "academic"])) {
     return `Akash's Academia profile: <a href="https://unipune.academia.edu/AkashShinde3" target="_blank">Open Academia</a>`;
   }
@@ -178,7 +214,7 @@ function getBotReply(message) {
   }
 
   if (has(["hire", "job", "internship", "developer", "role"])) {
-    return "Akash is interested in Java Full Stack Developer, Backend Developer and Software Developer roles.";
+    return "Akash is interested in Full Stack Developer, Backend Developer and Software Developer roles.";
   }
 
   if (has(["thank", "thanks", "thank you"])) {
@@ -186,8 +222,21 @@ function getBotReply(message) {
   }
 
   if (has(["help", "what can you do"])) {
-    return "I can help you with Akash's skills, education, projects, resume, research papers, contact number, WhatsApp, LinkedIn, GitHub, Academia and portfolio.";
+    return "I can help you with Akash's skills, education, projects, resume, research papers, contact number, WhatsApp, Instagram, LinkedIn, GitHub, Academia and portfolio.";
   }
 
-  return `I am a portfolio chatbot, so I can answer mainly about Akash Shinde. Ask me about skills, projects, resume, research papers, contact, WhatsApp, LinkedIn, GitHub, Academia or portfolio.`;
+  return "I am a portfolio chatbot, so I can answer mainly about Akash Shinde. Ask me about skills, projects, resume, research papers, contact, WhatsApp, Instagram, LinkedIn, GitHub, Academia or portfolio.";
+}
+
+/* Lightweight fish hover only */
+const heroFishCard = document.querySelector(".hero-fish-card");
+
+if (heroFishCard) {
+  heroFishCard.addEventListener("mouseenter", () => {
+    heroFishCard.style.transform = "translateY(-8px) scale(1.02)";
+  });
+
+  heroFishCard.addEventListener("mouseleave", () => {
+    heroFishCard.style.transform = "";
+  });
 }

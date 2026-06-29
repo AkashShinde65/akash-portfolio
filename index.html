@@ -10,6 +10,17 @@
 
 <body>
 
+  <div class="scene-bg" aria-hidden="true">
+    <span class="orb orb-one"></span>
+    <span class="orb orb-two"></span>
+    <span class="orb orb-three"></span>
+
+    <div class="fish-bg-layer">
+      <span class="bg-fish fish-a"><i></i></span>
+      <span class="bg-fish fish-b"><i></i></span>
+    </div>
+  </div>
+
   <nav class="navbar">
     <div class="logo">AS</div>
 
@@ -39,10 +50,19 @@
         </p>
       </div>
 
-      <div class="intro-photo">
-        <img src="images/profile.png" alt="Akash Shinde"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <span>AS</span>
+      <div class="hero-visual">
+        <div class="hero-fish-card">
+          <span class="hero-fish"><i></i></span>
+          <span class="water-bubble bubble-one"></span>
+          <span class="water-bubble bubble-two"></span>
+          <span class="water-bubble bubble-three"></span>
+        </div>
+
+        <div class="intro-photo mini-profile">
+          <img src="images/profile.png" alt="Akash Shinde"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span>AS</span>
+        </div>
       </div>
     </div>
 
@@ -80,7 +100,8 @@
         <h3>Resume</h3>
       </a>
 
-      <a href="mailto:luckakash65@gmail.com" class="home-connect-card">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=luckakash65@gmail.com" target="_blank"
+        class="connect-card">
         <img src="images/connect/email.png" alt="Email">
         <h3>Email</h3>
       </a>
@@ -101,15 +122,14 @@
       </a>
 
     </div>
-
   </section>
 
   <section id="about" class="section fade-up">
     <h2>About Me</h2>
     <p>
-      I am pursuing PG-DAC at CDAC. I am focused on Full Stack
-      Development, ASP.NET Core MVC, Web API, database connectivity,
-      CRUD applications, REST APIs and Microservices.
+      I am pursuing PG-DAC at CDAC. I am focused on Full Stack Development,
+      ASP.NET Core MVC, Web API, database connectivity, CRUD applications,
+      REST APIs and Microservices.
     </p>
   </section>
 
@@ -119,26 +139,17 @@
     <div class="about-grid">
       <div class="info-card">
         <h3>🎓 Education</h3>
-        <p>
-          Pursuing PG-DAC at CDAC with focus on software development,
-          databases and backend technologies.
-        </p>
+        <p>Pursuing PG-DAC at CDAC with focus on software development, databases and backend technologies.</p>
       </div>
 
       <div class="info-card">
         <h3>💻 Development Focus</h3>
-        <p>
-          Building practical applications using Java, JDBC, ASP.NET Core MVC,
-          Web API, MySQL and Oracle.
-        </p>
+        <p>Building practical applications using Java, JDBC, ASP.NET Core MVC, Web API, MySQL and Oracle.</p>
       </div>
 
       <div class="info-card">
         <h3>🚀 Career Goal</h3>
-        <p>
-          To work as a Full Stack Developer / Backend Developer and build
-          scalable software solutions.
-        </p>
+        <p>To work as a Full Stack Developer / Backend Developer and build scalable software solutions.</p>
       </div>
     </div>
   </section>
@@ -199,10 +210,7 @@
 
       <div class="resume-content">
         <h3>Akash Shinde - Resume</h3>
-        <p>
-          Open my resume to view my education, technical skills,
-          projects and contact details.
-        </p>
+        <p>Open my resume to view my education, technical skills, projects and contact details.</p>
 
         <a href="resume/Akash_Shinde_Resume.pdf" target="_blank" class="resume-btn">
           Open Resume
@@ -246,7 +254,9 @@
         <h3>Resume</h3>
       </a>
 
-      <a href="mailto:luckakash65@gmail.com" class="connect-card">
+
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=luckakash65@gmail.com" target="_blank"
+        class="home-connect-card">
         <img src="images/connect/email.png" alt="Email">
         <h3>Email</h3>
       </a>
@@ -278,27 +288,56 @@
     <p>© 2026 Akash Shinde | Portfolio Website</p>
   </footer>
 
-  <!-- Simple Portfolio Chatbot -->
   <div class="chatbot-box" id="chatbotBox">
     <div class="chatbot-header">
-      <span>Akash Bot</span>
-      <button onclick="toggleChatbot()">×</button>
+      <div class="chat-title">
+        <span class="chat-avatar">AI</span>
+        <div>
+          <strong>Akash Buddy</strong>
+          <small>Portfolio assistant</small>
+        </div>
+      </div>
+      <button onclick="toggleChatbot()" aria-label="Close chatbot">×</button>
     </div>
 
     <div class="chatbot-messages" id="chatbotMessages">
       <div class="bot-message">
-        Hi 👋 I am Akash Bot. Ask me about skills, projects, resume, research papers, Instagram, LinkedIn, GitHub,
+        Hi 👋 I am Akash Buddy. Ask me about skills, projects, resume, research papers, Instagram, LinkedIn, GitHub,
         Academia or WhatsApp.
       </div>
     </div>
 
     <div class="chatbot-input">
-      <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKey(event)">
+      <input type="text" id="chatInput" placeholder="Ask about Akash..." onkeypress="handleChatKey(event)">
       <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
-  <button class="chatbot-btn" onclick="toggleChatbot()">💬</button>
+  <div class="chatbot-mascot" id="chatbotMascot" role="button" tabindex="0" onclick="toggleChatbot()"
+    onkeypress="handleMascotKey(event)" aria-label="Open chatbot">
+    <div class="mascot-speech" id="mascotSpeech">Hi! Ask me anything 👋</div>
+
+    <div class="mascot-shadow"></div>
+
+    <div class="mascot-character">
+      <div class="mascot-head">
+        <span class="eye eye-left"></span>
+        <span class="eye eye-right"></span>
+        <span class="smile"></span>
+        <span class="antenna"></span>
+      </div>
+
+      <div class="mascot-arm arm-left"></div>
+      <div class="mascot-arm arm-right"></div>
+
+      <div class="mascot-body">
+        <span>AS</span>
+      </div>
+
+      <div class="mascot-leg leg-left"></div>
+      <div class="mascot-leg leg-right"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
