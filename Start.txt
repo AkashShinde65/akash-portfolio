@@ -8,3 +8,6 @@ git status
 git add .
 git commit -m "save latest code"
 git push
+
+
+git push origin main
